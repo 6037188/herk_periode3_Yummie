@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sushi webshop/restaurant">
+    <meta name="author" content="N.Sloos">
+    <meta name="keywords" content="Sushi Yummie, Yummie, Sushi, Japan">
+    <title>Bedankt voor uw reservering</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h2>Bedankt voor uw reservering!</h2>
+    <p>We hebben uw reservering ontvangen.</p>
+
+    <script>
+        // Haal de querystring op uit de URL
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+
+        // Haal de waarden uit de querystring
+        var voornaam = urlParams.get('voornaam');
+        var tussenvoegsel = urlParams.get('tussenvoegsel');
+        var achternaam = urlParams.get('achternaam');
+        var telefoonnummer = urlParams.get('telefoonnummer');
+        var email = urlParams.get('email');
+        var aantal_personen = urlParams.get('aantal_personen');
+        var datum = urlParams.get('datum');
+
+        // Toon de ingevulde informatie op de pagina
+        document.write("<p>Bedankt, " + voornaam + " " + (tussenvoegsel ? tussenvoegsel + " " : "") + achternaam + ", voor uw reservering!</p>");
+        document.write("<p>Telefoonnummer: " + telefoonnummer + "</p>");
+        document.write("<p>Emailadres: " + email + "</p>");
+        document.write("<p>Aantal personen: " + aantal_personen + "</p>");
+        document.write("<p>Datum: " + datum + "</p>");
+    </script>
+</body>
+
+</html>

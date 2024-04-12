@@ -1,0 +1,843 @@
+/* Import css font size */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@100..900&family=Montserrat:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Import other CSS files to this main style.css file  */
+@import 'footer.css';
+
+@import 'Arijancss.css';
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: 0;
+    box-sizing: border-box;
+    font-family: 'EB Garamond', serif;
+}
+
+body {
+    background-color: #F5F5DC;
+}
+
+nav {
+    background-color: none;
+    background: #CCCCCC;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 0px;
+    margin: 0 9px;
+}
+
+nav ul li a {
+    color: #800000;
+    letter-spacing: 2px;
+    padding: 10px;
+    -webkit-text-fill-color: #EC89B5;
+    font-size: 20px;
+    -webkit-text-stroke-width: 1.2px;
+    transition: color 0.3s ease, -webkit-text-fill-color 0.3s ease, -webkit-text-stroke-width 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+a:hover {
+    color: #ffce52;
+}
+
+a.active,
+a:hover {
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    left: 0;
+}
+
+.slogan {
+    margin-left: 240px;
+    margin-top: -60px;
+    display: flex;
+    align-items: center;
+    color: #800000;
+    font-size: 22px;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 52px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 896px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        background: #CCCCCC;
+        top: 60px;
+        text-align: center;
+        transition: all .5s;
+    }
+
+
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        margin-left: 100px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #800000;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+
+}
+
+/* Index page */
+
+main {
+    margin-top: 120px;
+    margin-left: 50px;
+}
+
+.container .content #first{
+    margin-bottom: 20px;
+}
+
+.container .content #second{
+    margin-bottom: 20px;
+}
+
+.container .content #third{
+    margin-bottom: 25px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content {
+    flex: 1;
+    width: 600px;
+    display: inline;
+}
+
+.container .content h1{
+    font-size: 30px;
+    margin-left: 160px;
+    margin-bottom: 30px;
+    margin-top: -70px;
+
+}
+
+.image {
+    flex: 1;
+}
+
+.slideseow-container {
+    max-width: 1000px;
+    position: relative;
+
+}
+
+.slide {
+    display: none;
+    margin-left: 200px;
+}
+
+.slide img {
+    width: 1200px;
+    height: 300px;
+}
+
+@media screen and (max-width: 480px) {
+    .slideshow-container {
+      margin-top: 20px; /* Adjust margin for mobile */
+      margin-left: auto; /* Center the container */
+    }
+  
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#imagestart {
+    width: 400px;
+    margin-left: 235px;
+    border-radius: 300px;
+    margin-top: -10px;
+}
+
+#Title_homepage {
+    margin-left: 180px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    font-size: 37px;
+}
+
+@media only screen and (max-width: 480px) {
+
+    main {
+        margin-top: 100px;
+        margin-left: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slideshow-container {
+       width: 100px;
+       height: 100px;
+    }
+
+    #imagestart {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #Title_homepage {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+ 
+  
+    body {
+        background-color: #F5F5DC;
+        width: 560px;
+    }
+
+    .header_navigation {
+        position: static;
+        background: #CCCCCC;
+        width: 100%;
+    }
+
+    .Navigation_text {
+        position: relative;
+        top: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+
+
+/*Our Menu webpage*/
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    border-bottom: 2px solid #000;
+    left: -100;
+}
+
+
+.column img {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.column h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-style: italic;
+    margin-left: -20px;
+}
+
+.column p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    width: 650px;
+}
+
+.column button {
+    background-color: #86942A;
+    color: white;
+    font-family: "Inter", sans-serif;
+    padding: 10px 10px;
+    margin-left: 800px;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 11px;
+    border: none;
+    cursor: pointer;
+    border-radius: 200px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 480px) {
+    .column img {
+
+        margin-bottom: 10px;
+        max-width: 100%;
+    }
+}
+
+.images_Our_Menu {
+    margin-left: -1000px;
+    margin-top: -80px;
+}
+
+.title_Menu {
+    margin-top: -200px;
+    margin-left: -500px;
+
+}
+
+#limited_edition {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#first_comment {
+    margin-top: -20px;
+}
+
+p {
+    margin-left: 20px;
+    font-size: 20px;
+    
+}
+
+
+.Our_Menu_Button {
+    margin-left: 1050px;
+    margin-top: -140px;
+    width: 100px;
+    max-width: 100px;
+    font-family: "EB Garamond", serif !important;
+    word-spacing: 4px !important;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 375px;
+    }
+
+    .title_Menu {
+        margin-left: 40px;
+        margin-top: 0px;
+    }
+
+    #Title_homepage {
+        Margin-left: 130px;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .Our_Menu_Button {
+        display: none;
+    }
+
+    .images_Our_Menu {
+        margin-top: -10px;
+        margin-left: 0px;
+    }
+
+    p {
+        margin-left: -10px;
+        font-size: 12px;
+        margin-top: 0px;
+        width: 370px;
+        margin-left: 0px;
+        max-width: 350px;
+        font-size: 10px;
+
+    }
+
+    .column p {
+        margin-left: 90px;
+        width: 500px;
+        margin-top: 26px;
+    }
+
+    p .index_p {
+        margin-bottom: -700px;
+    }
+
+    #DuoZalm {
+        margin-top: -40px;
+    }
+
+    #body_Our_Menu {
+        height: 320vh;
+    }
+
+}
+
+/*Reseverings webpagina*/
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin-bottom: 20px;
+}
+
+input[type="checkbox"]+label {
+    margin-left: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+a {
+    display: block;
+    margin-top: -10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+#voorwaarden {
+    margin-left: 0;
+}
+
+@media screen and(max-width: 480px) {
+    form {
+        max-width: 270px;
+        /* margin: 20px auto; */
+        /* padding: 20px; */
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media screen and(max-width: 768px) {
+    form {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media screen and(max-width: 480px) {
+    form {
+        max-width: 270px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media screen and(max-width: 768px) {
+    form {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.arrangement {
+    background-color: #f0f0df;
+    border-radius: 10px;
+    padding: 20px;
+    height: 600px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid #ddd;
+    /* Voeg een lichte rand toe */
+}
+
+.arrangement:hover {
+    transform: translateY(-5px);
+    border-color: #aaa;
+    /* Verander de randkleur bij hover */
+}
+
+.arrangement h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.arrangement p {
+    color: #666;
+    padding: 10px;
+    padding-left: 40px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #CCCCCC;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #800000;
+    -webkit-text-fill-color: #EC89B5;
+    padding: 28px 16px;
+    text-decoration: none;
+    margin-top: 0px;
+    display: block;
+}
+
+
+
+.dropdown-content a:hover {
+    background-color: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.driemenu {
+    width: 300px;
+}
+
+/* Algemene stijl voor arrangementen */
+.arrangement {
+    margin-bottom: 30px;
+}
+
+/* Stijl voor kaarten binnen arrangementen */
+.arrangement-card {
+    overflow: hidden;
+    width: 300px;
+}
+
+/* Stijl voor afbeeldingen binnen kaarten */
+.arrangement-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Stijl voor informatie binnen kaarten */
+.arrangement-info {
+    padding: 10px;
+}
+
+/* Stijl voor titels binnen kaarten */
+.arrangement-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Stijl voor beschrijvingen binnen kaarten */
+.arrangement-description {
+    margin-bottom: 15px;
+}
+
+/* Stijl voor details binnen kaarten */
+.arrangement-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Stijl voor prijzen binnen details */
+.arrangement-price {
+    font-size: 1.2em;
+}
+
+/* Stijl voor bestelknop binnen details */
+.arrangement-button {
+    background-color: #86942A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#arrangement-title {
+    padding-left: 70px;
+}
+
+/* Stijl voor hover-effect op bestelknop */
+.arrangement-button:hover {
+    background-color: #0056b3;
+}
+
+
+.review-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    background-color: #e4e4c8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review {
+    display: flex;
+    margin-bottom: 20px;
+    width: 750px;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #cfcfa9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.review .avatar {
+    flex: 0 0 80px;
+    margin-right: 15px;
+}
+
+.review .avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.review .content {
+    flex: 1;
+}
+
+.review .content h3 {
+    margin-top: 0;
+}
+
+.review .content p {
+    margin-bottom: 5px;
+}
+
+.rating-box {
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(45deg, #ff6b6b, #6b6bff);
+    color: #fff;
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    background-color: #6b6bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* CSS for phone version */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; 
+    }
+    
+    .container {
+        padding: 20px; 
+    }
+
+    .arrangement-card {
+        margin-bottom: 20px; 
+    }
+
+    .arrangement-img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .arrangement-title {
+        font-size: 20px; 
+    }
+
+    .arrangement-description {
+        font-size: 14px; 
+    }
+
+    .arrangement-price {
+        font-size: 16px; 
+    }
+
+    .arrangement-button {
+        font-size: 16px; 
+        padding: 10px 20px; 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .review{
+        width: 90%;
+    }
+
+    .review-container {
+        padding: 5px;
+    }
+
+    .form-container {
+        padding: 5px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+    input[type="text"],
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
+}
